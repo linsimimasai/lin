@@ -10,14 +10,17 @@
 
 html {
   scroll-behavior: smooth;
-  background: #05070e;
+  background: #03050a;
 }
 
 body {
   min-width: 320px;
   margin: 0;
   overflow-x: hidden;
-  background: #05070e;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(200, 255, 36, 0.08), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(56, 189, 248, 0.07), transparent 30%),
+    linear-gradient(180deg, #05070c 0%, #070a10 48%, #03050a 100%);
 }
 
 .font-playfair {
@@ -28,7 +31,7 @@ body {
   0% {
     opacity: 0;
     transform: translateY(28px);
-    filter: blur(12px);
+    filter: blur(0);
   }
   100% {
     opacity: 1;
@@ -118,6 +121,123 @@ body {
 
 .hero-streak-delay {
   animation-delay: 1.4s;
+}
+
+.dark-portfolio {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(200, 255, 36, 0.08), transparent 28%),
+    radial-gradient(circle at 84% 12%, rgba(56, 189, 248, 0.08), transparent 28%),
+    linear-gradient(180deg, #05070c 0%, #070a10 48%, #03050a 100%) !important;
+  color: #f8fafc;
+}
+
+.dark-portfolio section,
+.dark-portfolio footer {
+  background: transparent !important;
+  color: #f8fafc;
+}
+
+.dark-portfolio .hero-section {
+  background: #05070c !important;
+  color: #f8fafc;
+}
+
+.dark-portfolio .hero-bg {
+  background:
+    radial-gradient(circle at 16% 26%, rgba(200, 255, 36, 0.12), transparent 28%),
+    radial-gradient(circle at 72% 28%, rgba(56, 189, 248, 0.1), transparent 34%),
+    linear-gradient(135deg, #070a10 0%, #090d14 48%, #03050a 100%) !important;
+}
+
+.dark-portfolio .hero-ghost-word {
+  color: rgb(255 255 255 / 0.045) !important;
+}
+
+.dark-portfolio .hero-streak {
+  background: rgb(255 255 255 / 0.12) !important;
+}
+
+.dark-portfolio h1,
+.dark-portfolio h2,
+.dark-portfolio h3,
+.dark-portfolio h4 {
+  color: #f8fafc !important;
+}
+
+.dark-portfolio .text-slate-600,
+.dark-portfolio .text-slate-500,
+.dark-portfolio .text-slate-400 {
+  color: #aeb7c5 !important;
+}
+
+.dark-portfolio .text-slate-950,
+.dark-portfolio .text-slate-900,
+.dark-portfolio .text-slate-800,
+.dark-portfolio .text-slate-700 {
+  color: #f8fafc !important;
+}
+
+.dark-portfolio .text-lime-700,
+.dark-portfolio .text-acid {
+  color: #c8ff24 !important;
+}
+
+.dark-portfolio .bg-acid,
+.dark-portfolio .bg-acid * {
+  color: #05070c !important;
+}
+
+.dark-portfolio [class*="bg-white"] {
+  background-color: rgb(15 18 26 / 0.72) !important;
+}
+
+.dark-portfolio [class*="border-slate-950"],
+.dark-portfolio [class*="border-slate-900"] {
+  border-color: rgb(255 255 255 / 0.1) !important;
+}
+
+.dark-portfolio [class*="ring-white"] {
+  --tw-ring-color: rgb(255 255 255 / 0.08) !important;
+}
+
+.dark-portfolio nav [class*="bg-white"] {
+  background-color: rgb(8 11 17 / 0.72) !important;
+}
+
+.dark-portfolio nav a:first-child span {
+  color: rgb(248 250 252 / 0.82) !important;
+}
+
+.dark-portfolio #showcase article > div,
+.dark-portfolio footer > div > div,
+.dark-portfolio #about > div > div,
+.dark-portfolio [role="dialog"] > div {
+  background: rgb(11 14 21 / 0.78) !important;
+  border-color: rgb(255 255 255 / 0.1) !important;
+  box-shadow: 0 30px 90px rgb(0 0 0 / 0.34);
+}
+
+.dark-portfolio #showcase article > div > .absolute:nth-child(2) {
+  background: linear-gradient(90deg, rgb(10 13 20 / 0.9) 0%, rgb(12 16 24 / 0.68) 48%, rgb(4 6 11 / 0.92) 100%) !important;
+}
+
+.section-num,
+.section-number,
+.dark-portfolio #showcase article p[style*="-webkit-text-stroke"],
+.dark-portfolio #showcase article p[style*="WebkitTextStroke"] {
+  font-size: 96px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.06em !important;
+  color: rgba(255, 255, 255, 0.16) !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+.dark-portfolio button:not(.bg-acid),
+.dark-portfolio a:not(.bg-acid) {
+  border-color: rgb(255 255 255 / 0.12) !important;
 }
 
 @keyframes ghostFloat {

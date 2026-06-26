@@ -1,0 +1,183 @@
+.hero-grid-motion-wrap {
+  position: absolute;
+  top: 0;
+  right: -18vw;
+  z-index: 1;
+  width: 76vw;
+  height: 1000px;
+  min-height: 1000px;
+  pointer-events: auto;
+}
+
+.hero-grid-motion-mobile-wrap {
+  display: none;
+}
+
+.hero-grid-readability {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(247, 249, 246, 0.98) 0%,
+      rgba(247, 249, 246, 0.9) 38%,
+      rgba(247, 249, 246, 0.58) 58%,
+      rgba(247, 249, 246, 0) 100%
+    );
+  pointer-events: none;
+}
+
+.dark-portfolio .hero-grid-readability {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 7, 12, 0.98) 0%,
+      rgba(5, 7, 12, 0.9) 38%,
+      rgba(5, 7, 12, 0.56) 58%,
+      rgba(5, 7, 12, 0) 100%
+    );
+}
+
+.hero-soft-sheen {
+  background:
+    radial-gradient(circle at 18% 28%, rgba(202, 255, 115, 0.34), transparent 28%),
+    radial-gradient(circle at 62% 22%, rgba(255, 255, 255, 0.74), transparent 32%),
+    linear-gradient(110deg, rgba(255, 255, 255, 0.45), transparent 58%);
+}
+
+.dark-portfolio .hero-soft-sheen {
+  background:
+    radial-gradient(circle at 18% 28%, rgba(200, 255, 36, 0.1), transparent 28%),
+    radial-gradient(circle at 62% 22%, rgba(56, 189, 248, 0.08), transparent 32%),
+    linear-gradient(110deg, rgba(255, 255, 255, 0.04), transparent 58%);
+}
+
+.grid-motion {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-12deg) translate3d(4vw, -1vh, 0);
+  transform-origin: 50% 50%;
+  user-select: none;
+  will-change: transform;
+}
+
+.grid-motion__rows {
+  display: flex;
+  height: 100%;
+  min-width: max-content;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(24px, 2.4vw, 40px);
+}
+
+.grid-motion__row {
+  display: grid;
+  grid-template-columns: repeat(5, clamp(260px, 23vw, 400px));
+  align-items: start;
+  gap: clamp(24px, 2.2vw, 38px);
+  will-change: transform;
+}
+
+.grid-motion__card {
+  --card-shift-y: 0px;
+  --card-scale: 1;
+
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(200, 255, 36, 0.12), transparent 30%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.42)),
+    rgba(255, 255, 255, 0.56);
+  box-shadow:
+    0 22px 52px rgba(45, 60, 58, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.78);
+  padding: 7px;
+  backdrop-filter: blur(18px);
+  transform: translateY(var(--card-shift-y)) scale(var(--card-scale));
+  transform-origin: center;
+}
+
+.dark-portfolio .grid-motion__card {
+  border-color: rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at 16% 18%, rgba(200, 255, 36, 0.08), transparent 30%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03)),
+    rgba(9, 12, 18, 0.74);
+  box-shadow:
+    0 26px 62px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.grid-motion__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.04) contrast(1.02);
+  transform: scale(1.01);
+}
+
+.grid-motion__image--missing {
+  opacity: 0;
+}
+
+@media (max-width: 1023px) {
+  .hero-grid-motion-wrap,
+  .hero-grid-readability {
+    display: none;
+  }
+
+  .hero-grid-motion-mobile-wrap {
+    display: block;
+    width: min(128vw, 860px);
+    height: 300px;
+    margin: 40px -24px 0;
+    overflow: hidden;
+    border-radius: 28px;
+    pointer-events: auto;
+  }
+
+  .hero-grid-motion-mobile-wrap .grid-motion {
+    transform: rotate(-7deg) translate3d(-18vw, -4vh, 0);
+  }
+
+  .hero-grid-motion-mobile-wrap .grid-motion__rows {
+    justify-content: flex-start;
+    gap: 18px;
+  }
+
+  .hero-grid-motion-mobile-wrap .grid-motion__row {
+    grid-template-columns: repeat(4, 230px);
+    gap: 18px;
+  }
+
+  .hero-grid-motion-mobile-wrap .grid-motion__row:nth-child(n + 3),
+  .hero-grid-motion-mobile-wrap .grid-motion__card:nth-child(n + 5) {
+    display: none;
+  }
+
+  .hero-grid-motion-mobile-wrap .grid-motion__card {
+    border-radius: 20px;
+    padding: 7px;
+  }
+
+  .hero-grid-motion-mobile-wrap .grid-motion__image {
+    border-radius: 14px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .hero-grid-motion-wrap {
+    right: -12vw;
+    width: 70vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grid-motion__row {
+    transform: none !important;
+  }
+}

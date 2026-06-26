@@ -9,14 +9,14 @@ export default {
         playfair: ["Playfair Display", "serif"]
       },
       colors: {
-        ink: "#060812",
-        panel: "#0d1324",
+        ink: "#05070c",
+        panel: "#11151d",
         acid: "#c8ff24",
         copper: "#e8702a"
       },
       boxShadow: {
         glow: "0 0 60px rgba(200, 255, 36, 0.18)",
-        card: "0 28px 90px rgba(0, 0, 0, 0.42)"
+        card: "0 30px 90px rgba(0, 0, 0, 0.34)"
       }
     }
   },
