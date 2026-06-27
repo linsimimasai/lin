@@ -794,13 +794,13 @@ function App() {
 
               {activePreview === "detail" && (
                 <div className="grid gap-5 lg:h-[68vh] lg:min-h-[620px] lg:grid-cols-[0.34fr_0.66fr]">
-                  <div className="grid max-h-[68vh] gap-3 overflow-y-auto pr-1 lg:h-full lg:max-h-none">
+                  <div className="flex max-h-none gap-3 overflow-x-auto pb-2 pr-0 lg:grid lg:h-full lg:max-h-none lg:overflow-x-visible lg:overflow-y-auto lg:pb-0 lg:pr-1">
                     {detailPreviewItems.map((item, index) => (
                       <button
                         key={item.title}
                         type="button"
                         onClick={() => setActiveDetailIndex(index)}
-                        className={`rounded-2xl border px-5 py-4 text-left transition-colors ${
+                        className={`min-w-[230px] shrink-0 rounded-2xl border px-5 py-4 text-left transition-colors lg:min-w-0 lg:shrink ${
                           index === activeDetailIndex ? "border-acid/50 bg-acid/10" : "border-slate-950/10 bg-white/70 hover:bg-white"
                         }`}
                       >
@@ -810,7 +810,7 @@ function App() {
                     ))}
                   </div>
 
-                  <div className="max-h-[68vh] overflow-y-auto rounded-[22px] border border-slate-950/[0.08] bg-white/70 p-4 lg:h-full lg:max-h-none">
+                  <div className="max-h-none overflow-y-visible rounded-[22px] border border-slate-950/[0.08] bg-white/70 p-3 lg:h-full lg:max-h-none lg:overflow-y-auto lg:p-4">
                     <div className="mx-auto w-full max-w-[560px] overflow-hidden rounded-[18px] border border-slate-950/[0.08] bg-white">
                       <img
                         src={detailPreviewItems[activeDetailIndex].src}
