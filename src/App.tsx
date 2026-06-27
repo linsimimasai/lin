@@ -144,7 +144,7 @@ const detailPreviewItems = [
   {
     title: "经典商务内胆包详情页",
     meta: "箱包 / 长图详情页 / 产品展示",
-    src: "/portfolio/detail/business-laptop-bag-detail-page.png"
+    src: "/portfolio/detail/business-laptop-bag-detail-page.jpg"
   },
   {
     title: "Bixby AI 电视详情页",
